@@ -1,0 +1,53 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+app_home:
+    path: /
+    controller: App\Controller\HomeController::index
+    methods: [GET]
+
+app_booking_new:
+    path: /booking/new
+    controller: App\Controller\BookingNewController::new
+    methods: [GET, POST]  # Assurez-vous d'autoriser les méthodes GET et POST si vous utilisez un formulaire pour créer de nouvelles réservations
+
+
+new_confirmation_page:
+    path: /booking-new/confirmation
+    controller: App\Controller\BookingNewController::confirmationPage
+
+app_booking_edit:
+    path: '/booking/edit/{id}'
+    controller: App\Controller\BookingEditController::edit     
+app_booking_show:
+    path: '/booking/show/{id}'
+    controller: App\Controller\BookingController::show
+app_booking_confirm_delete:
+    path: /booking/confirm/delete/{id}
+    controller: App\Controller\BookingConnfirmDeleteController::confirmDelete
+    methods: [GET]
+
+
+app_menu_success:
+    path: '/menuSucces'
+    controller: 'App\Controller\MenuDuJourController::menuSucces'
+
+app_menu_supprimer:
+    path: '/menu/{id}/supprimer'
+    controller: 'App\Controller\SliderController::supprimerMenu'
+    methods: ['GET', 'POST']
+
+app_arrivee_ajouter:
+    path: '/arrivee/ajouter'
+    controller: 'App\Controller\ArriveeController::addArrivee'
+    methods: ['GET', 'POST']
+
+app_depart-ajouter:
+    path: '/depart'
+    controller: 'App\Controller\DepartController::addDepart'
+    methods: ['GET', 'POST']
+
+app_Depart_supprimer:
+    path: '/Depart/{id}/supprimer'
+    controller: 'App\Controller\DepartController::suppressionDepart'
+    methods: ['GET', 'POST']

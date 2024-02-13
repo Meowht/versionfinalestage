@@ -1,0 +1,185 @@
+/* /////////////////////////////////////////////////////////////////////////////////////////// */
+/*//////////////////////////// Slide de la date du jour /////////////////////////////////*/
+/* /////////////////////////////////////////////////////////////////////////////////////////// */
+
+.swiper-container {
+  overflow: hidden;
+}
+
+
+.dateDuJour {
+  background-image: url("../img/sky-1441936_1920.jpg");
+  /* background-color: white; */
+  
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: solid red; */
+}
+
+
+.dateDuJour h1{
+  text-shadow: rgb(0, 0, 0) 1px 0 10px;
+  color: white;
+}
+ 
+
+#ww_bc2631a0d5030{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////
+////////////////////////////  ARRIVEE ///////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////*/
+.arrivee{
+  text-align: center;
+  margin-top: 5%;
+}
+#uploadFileSection {
+  width: 100%; /* Occupera toute la largeur de son conteneur parent */
+  overflow: hidden; /* Assure que les éléments flottants ne débordent pas */
+}
+
+.textArrivee,
+.imageContainer {
+  
+  width: 50%; /* Chacun prendra la moitié de la largeur de l'écran */
+  box-sizing: border-box; /* Inclure les bordures et les marges dans la largeur */
+  padding: 20px; /* Ajout d'un espacement intérieur pour les éléments */
+  float: left; /* Les éléments resteront côte à côte */
+}
+
+.imageContainer {
+  border-left: 1px solid #ccc; /* Ajout d'une bordure entre les deux éléments */
+  margin-top: 2%;
+}
+
+.imageContainer img {
+  width: 100%; /* L'image occupera toute la largeur du conteneur */}
+
+
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////  ANIMATION DEPART /////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////// */
+
+#departFullPage {
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* .animationDepart {
+  position: relative;
+}
+
+.redLightStart {
+  position: relative;
+  display: flex;
+}
+
+.redLight {
+  width: 50px;
+  /* ajustez la taille selon vos besoins */
+  /* height: 50px; */
+  /* ajustez la taille selon vos besoins */
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  margin-right: 10px; */
+  /* ajustez la marge selon vos besoins */
+  /* opacity: 0; */
+  /* commencez avec une opacité à 0 pour les rendre invisibles */
+  /* animation: lightsAnimation 10s linear infinite; */
+  /* ajustez la durée selon vos besoins */
+/* } */
+
+/* .moveWheelChair {
+  position: absolute;
+  top: 50%;
+  /* ajustez la position verticale selon vos besoins */
+  /* left: 5%;
+  transform: translateX(-100%);
+  animation: moveWheelChairAnimation 8s cubic-bezier(0.4, 0, 0.2, 1) infinite; */ 
+  /* ajustez la durée selon vos besoins et la fonction cubic-bezier */
+  /* la fonction cubic-bezier permet de changer la vitesse de timing d'une animation sans toucher à sa durée */
+/* } */
+
+
+
+
+/* @keyframes lightsAnimation {
+
+  0%,
+  100% {
+    opacity: 0.5; */
+    /* commencez et terminez avec une opacité à 0 */
+  /* }
+
+  20%,
+  40% {
+    opacity: 1; */
+    /* montez l'opacité pour les rendre visibles */
+  /* }
+
+  60%,
+  80% {
+    opacity: 1; */
+    /* redescendez l'opacité pour les rendre invisibles */
+  /* }
+} */
+/* 
+@keyframes moveWheelChairAnimation {
+
+  0%,
+  50% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+} */
+
+/* Ajout d'un style spécifique à chaque lumière rouge avec un décalage dans l'animation */
+/* .redLight.redLight1 {
+  animation-delay: 0s;
+}
+
+.redLight.redLight2 {
+  animation-delay: 1s;
+}
+
+.redLight.redLight3 {
+  animation-delay: 2s;
+}
+
+.redLight.redLight4 {
+  animation-delay: 3s;
+}
+
+.redLight.redLight5 {
+  animation-delay: 4s;
+}  */
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////
+////////////////////////FORMULAIRE DU DEPART/////////////////////
+///////////////////////////////////////////////////////////////// */
+
+ /* .formDepart {
+   border: solid black; 
+  width: 40%;
+}  */
