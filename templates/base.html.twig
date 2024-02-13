@@ -66,11 +66,13 @@
                         <i class="fa-solid fa-user" style="color: #F7B8BB;"></i> Deconnexion
                     </a>
                 </li>
+                 {% if is_granted('ROLE_ADMIN') %}
                   <li class="nav-item" style="list-style-type: none;">
                     <a class="nav-link" href="{{path('app_register')}}">
                         <i class="fa-solid fa-user" style="color: #F7B8BB;"></i> créer un compte utilisateur
                     </a>
                 </li>
+                 {% endif %}
                {# {% endif %} #}
                
                 {% else %}

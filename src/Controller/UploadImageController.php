@@ -1,6 +1,8 @@
 <?php
 namespace App\Controller;
 
+use App\Entity\UploadImage;
+use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -8,12 +10,13 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use App\Form\UploadImageType;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 class UploadImageController extends AbstractController
 {
     #[Route('/upload/image', name: 'app_upload_image')]
-    public function uploadImage(Request $request)
-    {
+    public function uploadImage(Request $request, UserInterface $userInterface, ManagerRegistry $managerRegistry)
+    {  $upimage = new UploadImage();
         // Créer une instance du formulaire UploadImageType
         $formulaire = $this->createForm(UploadImageType::class);
 
@@ -41,6 +44,14 @@ class UploadImageController extends AbstractController
                     $imageFileName = $newFilename;
 
                     // Rediriger vers la page du slider avec le nom du fichier comme paramètre
+                //    dd( $imageFileName);
+
+                $upimage->setUploadedImage($imageFileName);
+                $upimage->setUser($userInterface);
+                    $manager = $managerRegistry->getManager();
+                    $manager->persist($upimage);
+                    $manager->flush();
+
                     return $this->redirectToRoute('app_home', ['imageFileName' => $imageFileName]);
                 } catch (FileException $e) {
                     // Gestion des erreurs en cas d'échec du téléchargement du fichier
